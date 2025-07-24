@@ -1,0 +1,146 @@
+/* Reset default browser style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Agar layout penuh tinggi dan footer di bawah */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Body - keseluruhan halaman */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #c3ecff, #fdfbfb);
+  color: #1f2937;
+  line-height: 1.6;
+  justify-content: space-between;
+}
+
+/* Navbar / Header */
+#navbar {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #111827;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #6366f1, #3b82f6);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+  background: linear-gradient(45deg, #3b82f6, #6366f1);
+  transform: translateY(-3px);
+}
+
+/* Konten Utama */
+.content {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #374151;
+}
+
+/* Kartu (untuk tugas & struktur) */
+.card-container,
+.struktur-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card,
+.struktur-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover,
+.struktur-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+#footer {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+/* Tabel Piket */
+.piket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.piket-table th,
+.piket-table td {
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  text-align: center;
+}
+
+.piket-table th {
+  background: linear-gradient(45deg, #6366f1, #3b82f6);
+  color: white;
+}
+
+.piket-table tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
